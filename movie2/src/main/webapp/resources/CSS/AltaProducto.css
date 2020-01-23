@@ -1,0 +1,44 @@
+h1{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+#botones{
+    position: relative;
+    left: 800px;
+}
+
+#bloqueFormularioPelicula{
+    position: relative;
+    display: none;
+    left: 700px;
+    top: 50px;
+}
+
+.form-popup{
+    display: none;
+}
+#bloqueFormularioSerie{
+    position: relative;
+    display: none;
+    left: 700px;
+    top: 50px;
+}
+
+
+#bloqueFormularioCancion{
+    position: relative;
+    display: none;
+    left: 700px;
+    top: 50px;
+}
+
+#boton_volver{
+	position: relative;
+    left: 200px;
+	
+}
+

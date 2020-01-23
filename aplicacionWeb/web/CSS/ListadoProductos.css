@@ -1,0 +1,39 @@
+#input_max{
+    position: relative;
+    top: -38px;
+    left: 80px;
+    width: 50px;
+}
+
+#input_min{
+    width: 50px;
+}
+
+#input_año{
+    position: relative;
+    top: -30px;
+
+}
+
+#label_año{
+    position: relative;
+    top: -40px;
+}
+
+#botones{
+    position: relative;
+    top: -60px;
+}
+
+.table-row{
+    cursor:pointer;
+}
+
+.highlighted {
+    background: red;
+}
+
+#data tr {
+    background: white;
+}
+

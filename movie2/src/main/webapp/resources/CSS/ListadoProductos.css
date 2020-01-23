@@ -1,0 +1,40 @@
+#max{
+    position: relative;
+    top: -38px;
+    left: 80px;
+    width: 50px;
+}
+
+#min{
+    width: 50px;
+}
+
+#anio{
+    position: relative;
+    top: -20px;
+
+}
+
+#label_año{
+    position: relative;
+    top: -40px;
+}
+
+#botones{
+    position: relative;
+    top: -60px;
+}
+
+.table-row{
+    cursor:pointer;
+}
+
+.highlighted {
+    background: red;
+}
+
+#data tr {
+    background: white;
+}
+
+

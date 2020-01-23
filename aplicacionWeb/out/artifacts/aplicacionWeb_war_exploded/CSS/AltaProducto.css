@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+#botones{
+    position: relative;
+    left: 850px;
+}
+
+#bloqueFormularioPelicula{
+    position: relative;
+    display: none;
+    left: 700px;
+    top: 50px;
+}
+
+.form-popup{
+    display: none;
+}
+#bloqueFormularioSerie{
+    position: relative;
+    display: none;
+    left: 700px;
+    top: 50px;
+}
+
+
+#bloqueFormularioCancion{
+    position: relative;
+    display: none;
+    left: 700px;
+    top: 50px;
+}
+

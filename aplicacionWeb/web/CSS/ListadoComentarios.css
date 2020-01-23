@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+}
+
+
+#titulo_inhabilitado{
+    width: 200px;
+
+}
+
+#puntuacion_inhabilitado{
+    width: 200px;
+}
+
+#titulo{
+    position: relative;
+    left: 850px;
+}
+
+#puntuacion{
+    position: relative;
+    left: 850px;
+}
+.table-row{
+    cursor:pointer;
+}
+
+.highlighted {
+    background: red;
+}
+
+#data tr {
+    background: white;
+}
+
