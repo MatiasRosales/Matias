@@ -1,0 +1,13 @@
+drop procedure nuevapelicula;
+drop procedure nuevacancion;
+drop procedure actualizarComentario;
+drop procedure actualizarPelicula;
+drop procedure actualizarCancion;
+drop procedure actualizarSerie;
+drop procedure eliminarComentario;
+drop procedure eliminarProducto;
+drop procedure nuevoComentario;
+drop procedure nuevaserie;
+drop table Comentario;
+drop table Producto;
+drop table Categoria;
