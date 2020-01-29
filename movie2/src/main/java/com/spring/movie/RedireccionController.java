@@ -27,7 +27,7 @@ public ModelAndView irAltaProducto() {
 @RequestMapping("/irCargarComentario")
 public ModelAndView irCargarComentario(@RequestParam String id) {
 	ModelAndView mv = new ModelAndView();
-	mv.setViewName("cargarComentario");
+	mv.setViewName("CargarComentario2");
 	mv.addObject("id",id);
 	return mv;
 }

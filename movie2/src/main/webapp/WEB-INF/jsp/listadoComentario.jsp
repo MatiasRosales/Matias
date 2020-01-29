@@ -10,6 +10,7 @@
      <link href="<c:url value="/resources/CSS/ListadoComentarios.css" />" rel="stylesheet">
      <link href="<c:url value="/resources/CSS/ListadoProductos.css" />" rel="stylesheet">
     <script src="<c:url value="/resources/JavaScripts/CargarFormularios.js" />"></script>
+        <script src="<c:url value="/resources/JavaScripts/knockout-3.5.1.js" />"></script>
     <h1 >  Comentarios  </h1>
 
 </head>
@@ -20,13 +21,16 @@
 </br>
 <div id="titulo">
     <label> Título  </label>
-    <input class="form-control" id="titulo_inhabilitado" type="text" value="${titulo}" disabled>
+    <input class="form-control" id="titulo_inhabilitado"  data-bind="value: titulo"  disabled>
 </div>
 
 </br>
 <div id="puntuacion">
     <label> Puntuacion  </label>
-    <input class="form-control" id="puntuacion_inhabilitado" type="text" value="${puntuacion}" disabled>
+    
+      <input class="form-control" id="puntuacion_inhabilitado"   data-bind="value: puntaje"   disabled>    
+
+       
 </div>
 
 </br>
@@ -61,12 +65,31 @@
 <button id="boton_volver" type="button" onclick="location.href='irListadoProductos'" class="btn btn-primary btn-lg">ir a Productos</button>
 
 
+<script>
+ko.bindingHandlers.starRating = {
+	    init: function(element, valueAccessor) {
+	        $(element).addClass("starRating");
+	        for (var i = 0; i < 10 ; i++)
+	           $("<span>").appendTo(element);
+	    }
+	};
+	
+	
+	
+function ProductoViewModel(titulo,puntaje){
+	this.titulo = ko.observable(titulo);
+	this.puntaje = ko.observable(puntaje);
+}	
+
+
+ko.applyBindings(new ProductoViewModel( "${titulo}",${puntuacion} ));
+
+</script>
 
 
 
 
-
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="<c:url value="/resources/JavaScripts/jquery-3.4.1.min.js" />"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
