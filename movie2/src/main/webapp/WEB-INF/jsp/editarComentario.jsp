@@ -27,7 +27,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="comentario_usuario">Usuario</label>
             <div class="col-md-4">
-                <input id="comentario_usuario" name="usuario" type="text"   value="${usuario}"  class="form-control input-md">
+                <input id="comentario_usuario" name="usuario" type="text"   value="${usuario}"  class="form-control input-md" required>
 
             </div>
         </div>
@@ -36,14 +36,14 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="comentario_puntaje">Puntaje</label>
             <div class="col-md-4">
-                <input id="comentario_puntaje" name="puntaje" type="text"  value="${puntaje}"   class="form-control input-md">
+                <input id="comentario_puntaje" name="puntaje" type="text"  value="${puntaje}"   class="form-control input-md" required>
 
             </div>
         </div>
         <div class="form-group">
             <label class="col-md-4 control-label" for="comentario_mensaje">Mensaje</label>
             <div class="col-md-4">
-                <input id="comentario_mensaje" name="mensaje" type="text"  value="${mensaje}"   class="form-control input-md">
+                <input id="comentario_mensaje" name="mensaje" type="text"  value="${mensaje}"   class="form-control input-md" required>
 
             </div>
         </div>

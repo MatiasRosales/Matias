@@ -26,7 +26,7 @@
 
         <div class="form-group">
             <div class="col-md-4">
-                <input id="cancion_id" name="id" type="text"  value="${id}"    class="form-control input-md" style="display: none">
+                <input id="cancion_id" name="id" type="text"  value="${id}"    class="form-control input-md" style="display: none" >
 
             </div>
         </div>
@@ -34,7 +34,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="cancion_titulo">Titulo</label>
             <div class="col-md-4">
-                <input id="cancion_titulo" name="titulo" type="text"  value="${titulo}"  class="form-control input-md">
+                <input id="cancion_titulo" name="titulo" type="text"  value="${titulo}"  class="form-control input-md" required>
 
             </div>
         </div>
@@ -43,7 +43,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="cancion_genero">Genero</label>
             <div class="col-md-4">
-                <input id="cancion_genero" name="genero" type="text" value="${genero}" class="form-control input-md">
+                <input id="cancion_genero" name="genero" type="text" value="${genero}" class="form-control input-md" required>
 
             </div>
         </div>
@@ -52,7 +52,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="cancion_anio">Año</label>
             <div class="col-md-4">
-                <input id="cancion_anio" name="anio" type="text" value= "${anio}" class="form-control input-md">
+                <input id="cancion_anio" name="anio" type="text" value= "${anio}" class="form-control input-md" required>
 
             </div>
         </div>
@@ -61,7 +61,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="cancion_origen">Origen</label>
             <div class="col-md-4">
-                <input id="cancion_origen" name="origen" type="text" value="${origen}" class="form-control input-md">
+                <input id="cancion_origen" name="origen" type="text" value="${origen}" class="form-control input-md" required>
 
             </div>
         </div>
@@ -70,7 +70,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="cancion_artista">Artista</label>
             <div class="col-md-4">
-                <input id="cancion_artista" name="artista" type="text" value="${artista}"  class="form-control input-md">
+                <input id="cancion_artista" name="artista" type="text" value="${artista}"  class="form-control input-md" required>
 
             </div>
         </div>
@@ -79,7 +79,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="cancion_album">Album</label>
             <div class="col-md-4">
-                <input id="cancion_album" name="album" type="text" value="${album}" class="form-control input-md">
+                <input id="cancion_album" name="album" type="text" value="${album}" class="form-control input-md" required>
 
             </div>
         </div>

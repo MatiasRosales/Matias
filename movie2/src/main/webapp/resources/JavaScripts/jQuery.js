@@ -79,8 +79,15 @@ $(".previous").click(function(){
 
 
 
-
-
+function STARS() {
+    for (i = 0; i < document.getElementsByName('rate').length; i++) {
+            if(document.getElementsByName('rate')[i].checked == true) {
+                var ratingValue = document.getElementsByName('rate')[i].value;
+                break;
+            }
+    }
+  document.getElementById("puntaje").value = ratingValue;
+}
 
 
 

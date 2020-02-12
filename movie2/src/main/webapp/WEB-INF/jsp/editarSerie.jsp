@@ -27,7 +27,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="serie_titulo">Titulo</label>
             <div class="col-md-4">
-                <input id="serie_titulo" name="titulo" type="text" value="${titulo}" class="form-control input-md">
+                <input id="serie_titulo" name="titulo" type="text" value="${titulo}" class="form-control input-md" required>
 
             </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="serie_genero">Genero</label>
             <div class="col-md-4">
-                <input id="serie_genero" name="genero" type="text" value="${genero}" class="form-control input-md">
+                <input id="serie_genero" name="genero" type="text" value="${genero}" class="form-control input-md" required>
 
             </div>
         </div>
@@ -45,7 +45,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="serie_anio">Año</label>
             <div class="col-md-4">
-                <input id="serie_anio" name="anio" type="text" value="${anio}" class="form-control input-md">
+                <input id="serie_anio" name="anio" type="text" value="${anio}" class="form-control input-md" required>
 
             </div>
         </div>
@@ -54,7 +54,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="serie_origen">Origen</label>
             <div class="col-md-4">
-                <input id="serie_origen" name="origen" type="text" value="${origen}"class="form-control input-md">
+                <input id="serie_origen" name="origen" type="text" value="${origen}"class="form-control input-md" required>
 
             </div>
         </div>
@@ -63,7 +63,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="serie_episodios">Episodios</label>
             <div class="col-md-4">
-                <input id="serie_episodios" name="episodios" type="text" value="${episodios}" class="form-control input-md">
+                <input id="serie_episodios" name="episodios" type="text" value="${episodios}" class="form-control input-md" required>
 
             </div>
         </div>
@@ -72,7 +72,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="serie_temporadas">Temporadas</label>
             <div class="col-md-4">
-                <input id="serie_temporadas" name="temporadas" type="text" value="${temporadas}" class="form-control input-md">
+                <input id="serie_temporadas" name="temporadas" type="text" value="${temporadas}" class="form-control input-md" required>
 
             </div>
         </div>

@@ -89,7 +89,7 @@ public ModelAndView cargarCancion(@ModelAttribute("producto") Producto prod) thr
 
 
 
-
+/*
 @RequestMapping("/eliminarProducto")
 public ModelAndView eliminarProducto(@RequestParam String id) throws SQLException {
 	int idInt =Integer.parseInt(id );
@@ -107,6 +107,24 @@ public ModelAndView eliminarProducto(@RequestParam String id) throws SQLExceptio
      return mv;
 
 }
+*/
+
+
+@RequestMapping(value= "/eliminarProducto" , method = RequestMethod.POST)
+public void eliminarProducto(@RequestParam String id) throws SQLException {
+	int idInt =Integer.parseInt(id);
+	Conexion c =new Conexion();
+	CallableStatement cs = c.getConexion().prepareCall("{call eliminarProducto(?)}");
+	cs.setInt(1,idInt);
+	cs.execute();
+     
+}
+
+
+
+
+
+
 
 @RequestMapping("/editarPelicula")
 public ModelAndView editarPelicula(@ModelAttribute("producto") Producto prod) throws SQLException {
@@ -212,6 +230,26 @@ public ModelAndView editarCancion(@ModelAttribute("producto") Producto prod) thr
 	 
 	     	        
 	 
+ }
+ 
+ 
+ 
+ 
+ @RequestMapping(value= "/listaNombreProductos",method= RequestMethod.GET)
+ public @ResponseBody List<String> listaNombreProductos() throws SQLException{
+	 List<String> lista = new ArrayList<String>();
+	 Conexion c = new Conexion();
+	 String sql = "select prod_titulo from Producto";
+	 PreparedStatement ps;
+	 ResultSet rs;
+	 ps= (PreparedStatement) c.getConexion().prepareStatement(sql);
+	 rs = ps.executeQuery();
+	 while(rs.next()) {
+		 lista.add(rs.getString("prod_titulo"));
+	 }
+	 
+	 
+	 return lista;
  }
 
     

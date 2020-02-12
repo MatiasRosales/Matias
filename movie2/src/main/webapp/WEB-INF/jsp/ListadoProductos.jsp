@@ -171,35 +171,7 @@
 		}, 
 		contentType : 'application/json',
 		success : function(data) {	
-			var id;
-			var titulo;
-			var genero;
-			var categoria;
-			var anio;
-			var origen;
-			var artista;
-			var album;
-			var episodios;
-			var temporadas;
-			var puntaje;
-			/*
-			for( var i =0; i< data.length; i++){
-				id = data[i].id;
-				titulo = data[i].titulo;
-				genero  = data[i].genero;
-				categoria = data[i].categoria;
-				anio = data[i].anio;
-				origen = data[i].origen;
-				artista = data[i].artista;
-				album = data[i].album;
-				episodios = data[i].episodios;
-				temporadas = data[i].temporadas;
-				puntaje = data[i].puntaje;
-				
-				$('#table').append('<tr id= '+id+'  class="table-row" onclick="marcar(this)" > <td> '+id+'  </td> <td> '+titulo+'  </td> <td> '+genero+'  </td>  <td> '+categoria+'  </td> <td> '+anio+'  </td> <td> '+origen+'  </td> <td> '+artista+' </td> <td> '+album+' </td> <td> '+episodios+'  </td> <td> '+temporadas+'  </td> <td> '+puntaje+' </td> </tr>');
-			
-			}
-			*/
+	
 			data.forEach(elemento => $('#table').append('<tr id= '+elemento.id+'  class="table-row" onclick="marcar(this)" > <td> '+elemento.id+'  </td> <td> '+elemento.titulo+'  </td> <td> '+elemento.genero+'  </td>  <td> '+elemento.categoria+'  </td> <td> '+elemento.anio+'  </td> <td> '+elemento.origen+'  </td> <td> '+elemento.artista+' </td> <td> '+elemento.album+' </td> <td> '+elemento.episodios+'  </td> <td> '+elemento.temporadas+'  </td> <td> '+elemento.puntaje+' </td> </tr>'));
 			
 			
@@ -210,6 +182,18 @@
 
 };
  
+ 
+ function eliminarProductos(idProducto){
+	 $.ajax({
+		 type:'POST',
+			url:'eliminarProducto',
+			data:{id: idProducto }
+	 });
+	 $("#"+idProducto+"").remove();
+	 
+	 
+	 
+ }
  
 
 

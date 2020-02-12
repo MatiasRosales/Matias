@@ -56,13 +56,35 @@ and is wrapped around the whole page content, except for the footer in this exam
         
             <h2 class="fs-title">Inserte su nombre de usuario</h2>
             <h3 class="fs-subtitle">paso 1</h3>
-            <input  id="usuario" type="text" name="usuario" placeholder="Usuario" />
+            <input  id="usuario" type="text" name="usuario" placeholder="Usuario" required />
             <input type="button" name="next" class="next action-button" value="Next" />
         </fieldset>
         <fieldset>
             <h2 class="fs-title">Puntaje</h2>
             <h3 class="fs-subtitle">paso 2</h3>
-            <input id="puntaje" type="text" name="puntaje" placeholder="Puntaje" />
+            <input id="puntaje" type="hidden" name="puntaje" placeholder="Puntaje" />
+             <div class="rate">
+     <input type="radio" onclick="STARS()" id="star10" name="rate" value="10" />
+    <label for="star10" title="10">10 stars</label>
+     <input type="radio" onclick="STARS()" id="star9" name="rate" value="9" />
+    <label for="star9" title="9">9 stars</label>
+     <input type="radio" onclick="STARS()" id="star8" name="rate" value="8" />
+    <label for="star8" title="8">8 stars</label>
+     <input type="radio"  onclick="STARS()" id="star7" name="rate" value="7" />
+    <label for="star7" title="7">7 stars</label>
+     <input type="radio" onclick="STARS()" id="star6" name="rate" value="6" />
+    <label for="star6" title="6">6 stars</label>
+    <input type="radio" onclick="STARS()" id="star5" name="rate" value="5" />
+    <label for="star5" title="5">5 stars</label>
+    <input type="radio" onclick="STARS()" id="star4" name="rate" value="4" />
+    <label for="star4" title="4">4 stars</label>
+    <input type="radio" onclick="STARS()" id="star3" name="rate" value="3" />
+    <label for="star3" title="3">3 stars</label>
+    <input type="radio" onclick="STARS()" id="star2" name="rate" value="2" />
+    <label for="star2" title="2">2 stars</label>
+    <input type="radio" onclick="STARS()" id="star1" name="rate" value="1" />
+    <label for="star1" title="1">1 star</label>
+  </div>
             <input type="button" name="previous" class="previous action-button" value="Previous" />
             <input type="button" name="next" class="next action-button" value="Next" />
         </fieldset>
@@ -70,7 +92,7 @@ and is wrapped around the whole page content, except for the footer in this exam
             <h2 class="fs-title">Mensaje</h2>
             <h3 class="fs-subtitle">Deje su comentario!</h3>
 
-            <textarea id="mensaje" name="mensaje" placeholder="Comentario"></textarea>
+            <textarea id="mensaje" name="mensaje" placeholder="Comentario" required></textarea>
             <input type="button" name="previous" class="previous action-button" value="Previous" />
             <input type="submit" name="submit" class="submit action-button" value="Submit" />
         </fieldset>

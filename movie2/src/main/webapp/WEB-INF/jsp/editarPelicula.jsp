@@ -30,7 +30,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="pelicula_titulo">Titulo</label>
             <div class="col-md-4">
-                <input id="pelicula_titulo" name="titulo" type="text"  value="${titulo}" class="form-control input-md">
+                <input id="pelicula_titulo" name="titulo" type="text"  value="${titulo}" class="form-control input-md" required>
 
             </div>
         </div>
@@ -39,7 +39,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="pelicula_genero">Genero</label>
             <div class="col-md-4">
-                <input id="pelicula_genero" name="genero" type="text"  value="${genero}" class="form-control input-md">
+                <input id="pelicula_genero" name="genero" type="text"  value="${genero}" class="form-control input-md" required>
 
             </div>
         </div>
@@ -48,7 +48,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="pelicula_anio">Año</label>
             <div class="col-md-4">
-                <input id="pelicula_anio" name="anio" type="text"  value="${anio}" class="form-control input-md">
+                <input id="pelicula_anio" name="anio" type="text"  value="${anio}" class="form-control input-md" required>
 
             </div>
         </div>
@@ -57,7 +57,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="pelicula_origen">Origen</label>
             <div class="col-md-4">
-                <input id="pelicula_origen" name="origen" type="text"  value="${origen}" class="form-control input-md">
+                <input id="pelicula_origen" name="origen" type="text"  value="${origen}" class="form-control input-md" required>
 
             </div>
         </div>

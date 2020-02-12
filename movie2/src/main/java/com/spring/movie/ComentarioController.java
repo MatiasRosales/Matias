@@ -8,7 +8,9 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.mysql.jdbc.CallableStatement;
@@ -96,18 +98,36 @@ public ModelAndView editarComentario(@ModelAttribute("comentario") Comentario co
 }
 
 
-@RequestMapping("/eliminarComentario")
-public ModelAndView eliminarComentario(@RequestParam String id) throws SQLException {
-	ModelAndView mv = new ModelAndView();
-	mv.setViewName("VentanaResultado");
+@RequestMapping(value ="/eliminarComentario", method = RequestMethod.GET)
+public @ResponseBody  int eliminarComentario(@RequestParam String id) throws SQLException {
 	Conexion c = new Conexion();
-	 CallableStatement cs = (CallableStatement) c.getConexion().prepareCall("{call eliminarComentario(?)}");
+	PreparedStatement ps;
+	int idProducto = 0;
+    ResultSet rs;
 	int idInt = Integer.parseInt(id);
-	 cs.setInt(1,idInt);
+    ps = (PreparedStatement) c.getConexion().prepareStatement("select id_producto from Comentario where id_comentario = ?");
+ps.setInt(1, idInt);
+rs = ps.executeQuery();
+while(rs.next()) {
+	idProducto = rs.getInt("id_producto");
+}
+
 	
+	 CallableStatement cs = (CallableStatement) c.getConexion().prepareCall("{call eliminarComentario(?)}");
+	 cs.setInt(1,idInt);
 	 cs.execute();
-	mv.addObject("mensaje", "Comentario Eliminado");
-	return mv;
+	 
+	 
+	    ps = (PreparedStatement) c.getConexion().prepareStatement("select prod_puntaje from Producto where id_producto = ?");
+	    ps.setInt(1,idProducto);
+	    rs = ps.executeQuery();
+	    int puntaje = 0;
+	    while(rs.next()) {
+	    	puntaje = rs.getInt("prod_puntaje");
+	    }
+	 return puntaje;
+	 
+
 }
 
 

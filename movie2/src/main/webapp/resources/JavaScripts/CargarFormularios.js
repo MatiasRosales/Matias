@@ -74,7 +74,7 @@ function editarProducto(){
 function eliminarProducto(){
 
     if(idMarcado != null){
-        location.href = 'eliminarProducto?id='+idMarcado;
+        eliminarProductos(idMarcado);
     }
 
 }
@@ -89,7 +89,7 @@ function verComentarios(){
 
 function eliminarComentario(){
     if(idMarcado!= null){
-        location.href = 'eliminarComentario?id='+idMarcado;
+        eliminarComentarios(idMarcado);
     }
 }
 
@@ -108,6 +108,19 @@ function cargarComentario(){
 
 
 
+function mostrarSTARS(numero){
+	
+
+	for(let i =0;i<numero;i++){
+	document.getElementById("puntuacion").innerHTML   += '<span class="fa fa-star checked"></span>';
+	}
+	if(numero < 10){
+	for(let i =0;i<10- numero ;i++){
+	document.getElementById("puntuacion").innerHTML   += '<span class="fa fa-star "></span>';
+	}
+	}
+
+	};
 
 
 

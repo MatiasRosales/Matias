@@ -36,9 +36,9 @@ h3{
     top: 50px;
 }
 
-#boton_volver{
-	position: relative;
-    left: 200px;
-	
+
+
+.span{
+	color: red;
 }
 

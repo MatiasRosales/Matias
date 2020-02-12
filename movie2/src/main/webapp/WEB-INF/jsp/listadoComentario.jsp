@@ -10,6 +10,7 @@
      <link href="<c:url value="/resources/CSS/ListadoComentarios.css" />" rel="stylesheet">
      <link href="<c:url value="/resources/CSS/ListadoProductos.css" />" rel="stylesheet">
     <script src="<c:url value="/resources/JavaScripts/CargarFormularios.js" />"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="<c:url value="/resources/JavaScripts/knockout-3.5.1.js" />"></script>
     <h1 >  Comentarios  </h1>
 
@@ -28,8 +29,8 @@
 <div id="puntuacion">
     <label> Puntuacion  </label>
     
-      <input class="form-control" id="puntuacion_inhabilitado"   data-bind="value: puntaje"   disabled>    
-
+      <input class="form-control" id="puntuacion_inhabilitado"   data-bind="value: puntaje"  type="hidden"  disabled>    
+		
        
 </div>
 
@@ -66,23 +67,53 @@
 
 
 <script>
-ko.bindingHandlers.starRating = {
-	    init: function(element, valueAccessor) {
-	        $(element).addClass("starRating");
-	        for (var i = 0; i < 10 ; i++)
-	           $("<span>").appendTo(element);
-	    }
-	};
-	
+
+
+
+function eliminarComentarios(idComentario){
+	 $.ajax({
+		 type:'GET',
+			url:'eliminarComentario',
+			dataType: 'json',
+			data:{id: idComentario },
+			contentType : 'application/json',
+			success : function(data) {	
+		eliminarSTARS();
+				mostrarSTARS(data);
+		
+				
+				
+				}
+	 });
+	 $("#"+idComentario+"").remove();
+	 
+	 
+	 
+	 
+	 
+};
+
+
+function eliminarSTARS(){
+	$(".fa-star").remove();
+};
+
+
+
+
+
+
 	
 	
 function ProductoViewModel(titulo,puntaje){
 	this.titulo = ko.observable(titulo);
 	this.puntaje = ko.observable(puntaje);
+	mostrarSTARS(puntaje);
 }	
 
 
-ko.applyBindings(new ProductoViewModel( "${titulo}",${puntuacion} ));
+
+ko.applyBindings(new ProductoViewModel( "${titulo}",${puntuacion}));
 
 </script>
 
